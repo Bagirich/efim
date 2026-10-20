@@ -1920,3 +1920,39 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-05 .напр:nth-child(4) { grid-column: 6 / span 7; }
     #экран-05 .напр h3 { font-size: var(--кегль-лид); }
   }
+
+/* экран 06 */
+#экран-06 { position: relative; overflow: hidden; }
+  #экран-06 .блок__внутри { position: relative; z-index: 2; }
+  #экран-06 .пятно-света { position: absolute; z-index: 0; pointer-events: none; width: 55%; height: 60%; left: -14%; bottom: -6%; }
+  #экран-06.светлый .пятно-света { background: radial-gradient(closest-side, color-mix(in srgb, var(--цвет-акцент-яркий) 28%, transparent), transparent); }
+  #экран-06.тёмный .пятно-света { background: radial-gradient(closest-side, color-mix(in srgb, var(--цвет-акцент-яркий) 20%, transparent), transparent); }
+  #экран-06 .начало-шапка { display: grid; gap: .875rem; max-width: 44rem; margin: 0 auto 3rem; text-align: center; }
+  #экран-06 .начало-шапка > * { margin: 0; }
+  #экран-06.светлый .лид { color: var(--цвет-текст-мягкий); }
+  #экран-06.тёмный .лид { color: color-mix(in srgb, var(--цвет-тёмный-текст) 80%, transparent); }
+  #экран-06 .тропа { position: relative; display: grid; grid-template-columns: 1fr; gap: 2rem; margin: 0; padding: 0; list-style: none; }
+  #экран-06 .тропа-шаг { position: relative; display: grid; gap: .75rem; padding-left: 4.25rem; }
+  #экран-06 .тропа-шаг h3 { display: block; font-weight: 700; font-size: var(--кегль-лид); line-height: 1.2; margin: 0; }
+  #экран-06 .тропа-шаг p { font-size: var(--кегль-текст); line-height: 1.6; margin: 0; }
+  #экран-06 .тропа-номер { position: absolute; left: 0; top: 0; z-index: 1; display: grid; place-items: center; width: 3rem; height: 3rem; border-radius: 50%; font-weight: 700; font-size: var(--кегль-лид); line-height: 1; }
+
+  #экран-06 .тропа-шаг::before { content: ""; position: absolute; left: 1.4rem; top: 3rem; bottom: -2rem; width: var(--нить); }
+  #экран-06 .тропа-шаг:last-child::before { display: none; }
+  #экран-06.светлый .тропа-шаг::before, #экран-06.тёмный .тропа-шаг::before { background: var(--цвет-акцент-яркий); }
+  #экран-06.светлый .тропа-номер, #экран-06.тёмный .тропа-номер { background: var(--цвет-акцент-яркий); color: var(--цвет-тёмный-фон-2); box-shadow: var(--тень); }
+  #экран-06.светлый .тропа-шаг h3 { color: var(--цвет-текст); }
+  #экран-06.тёмный .тропа-шаг h3 { color: var(--цвет-тёмный-текст); }
+  #экран-06.светлый .тропа-шаг p { color: var(--цвет-текст-мягкий); }
+  #экран-06.тёмный .тропа-шаг p { color: color-mix(in srgb, var(--цвет-тёмный-текст) 80%, transparent); }
+
+  #экран-06 .итог-плита { display: grid; gap: 1.5rem; align-items: center; margin-top: 3rem; padding: 1.75rem; border-radius: var(--радиус-карточки); }
+  #экран-06 .итог-плита p { margin: 0; font-size: var(--кегль-лид); line-height: 1.45; }
+  #экран-06.светлый .итог-плита, #экран-06.тёмный .итог-плита { background: var(--цвет-тёмный-фон-2); border: 1px solid color-mix(in srgb, var(--цвет-акцент-яркий) 32%, transparent); box-shadow: var(--тень-глубокая); }
+  #экран-06.светлый .итог-плита p, #экран-06.тёмный .итог-плита p { color: var(--цвет-тёмный-текст); }
+  @media (min-width: 900px) {
+    #экран-06 .тропа { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.5rem; }
+    #экран-06 .тропа-шаг { padding-left: 0; padding-top: 4.25rem; }
+    #экран-06 .тропа-шаг::before { left: 3.5rem; right: -2.5rem; top: 1.4rem; bottom: auto; width: auto; height: var(--нить); }
+    #экран-06 .итог-плита { grid-template-columns: minmax(0, 1fr) auto; gap: 2.5rem; padding: 2.25rem 2.5rem; }
+  }
