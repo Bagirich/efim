@@ -1995,3 +1995,29 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-07 .портрет-ряд { margin: 0 0 1.75rem 1.75rem; }
     #экран-07 .портрет img { aspect-ratio: 4 / 5; }
   }
+
+/* экран 08 */
+#экран-08 { position: relative; overflow: hidden; }
+  #экран-08 .блок__внутри { position: relative; z-index: 2; }
+  #экран-08 .отзывы-шапка { display: grid; gap: 1rem; justify-items: center; text-align: center; max-width: 44rem; margin: 0 auto 3rem; }
+  #экран-08 .отзывы-шапка > * { margin: 0; }
+  #экран-08.светлый .отзывы-шапка .кикер { color: var(--цвет-акцент-глубже); }
+  #экран-08.тёмный .отзывы-шапка .кикер { color: var(--цвет-акцент-яркий); }
+  #экран-08 .отзывы-шапка .лид { font-size: var(--кегль-лид); line-height: 1.55; }
+  #экран-08.светлый .отзывы-шапка .лид { color: var(--цвет-текст-мягкий); }
+  #экран-08.тёмный .отзывы-шапка .лид { color: color-mix(in srgb, var(--цвет-тёмный-текст) 82%, transparent); }
+  #экран-08 .место { position: relative; max-width: 40rem; margin: 0 auto; padding: 0 0 1rem 1rem; }
+  #экран-08 .место::before { content: ""; position: absolute; z-index: 0; inset: 1rem 0 0 2rem; border: 1px solid var(--цвет-акцент-яркий); border-radius: var(--радиус); }
+  #экран-08 .пустой-отзыв { position: relative; z-index: 1; display: grid; gap: 1rem; justify-items: center; text-align: center; padding: 2.5rem 1.5rem; border: 2px dashed var(--цвет-акцент-яркий); border-radius: var(--радиус); }
+  #экран-08.светлый .пустой-отзыв { background: var(--цвет-фон-карточки); box-shadow: var(--тень); }
+  #экран-08.тёмный .пустой-отзыв { background: color-mix(in srgb, var(--цвет-тёмный-текст) 7%, transparent); }
+  #экран-08 .кавычка { display: block; width: 3.5rem; height: 3.5rem; }
+  #экран-08 .кавычка path { fill: none; stroke: var(--цвет-акцент-яркий); stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; }
+  #экран-08 .пустой-отзыв p { margin: 0; font-size: var(--кегль-лид); line-height: 1.5; font-style: italic; max-width: 28rem; }
+  #экран-08.светлый .пустой-отзыв p { color: var(--цвет-текст); }
+  #экран-08.тёмный .пустой-отзыв p { color: var(--цвет-тёмный-текст); }
+  @media (min-width: 900px) {
+    #экран-08 .отзывы-шапка { margin-bottom: 4rem; }
+    #экран-08 .место { padding-bottom: 1.5rem; }
+    #экран-08 .пустой-отзыв { padding: 3.5rem 3rem; }
+  }
