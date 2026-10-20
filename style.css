@@ -1761,6 +1761,59 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-02 .слой:nth-child(3) { margin-left: 1.5rem; }
   }
 
+/* экран 03 */
+#экран-03 { position: relative; overflow: hidden; }
+  #экран-03 .блок__внутри { position: relative; z-index: 2; }
+  #экран-03 .пятно-света { position: absolute; z-index: 0; pointer-events: none; width: 60%; height: 70%; left: -12%; top: 20%; }
+  #экран-03.светлый .пятно-света { background: radial-gradient(closest-side, color-mix(in srgb, var(--цвет-акцент-яркий) 34%, transparent), transparent); }
+  #экран-03.тёмный .пятно-света { background: radial-gradient(closest-side, color-mix(in srgb, var(--цвет-акцент-яркий) 22%, transparent), transparent); }
+  #экран-03 .цели-шапка { display: grid; gap: .875rem; max-width: 40rem; margin-bottom: 2.5rem; }
+  #экран-03 .цели-шапка > * { margin: 0; }
+  #экран-03.светлый .лид { color: var(--цвет-текст-мягкий); }
+  #экран-03.тёмный .лид { color: color-mix(in srgb, var(--цвет-тёмный-текст) 80%, transparent); }
+  #экран-03.светлый .акцент { color: var(--цвет-акцент); }
+  #экран-03.тёмный .акцент { color: var(--цвет-акцент-яркий); }
+  #экран-03 .цели { display: grid; grid-template-columns: 1fr; gap: 1rem; margin: 0; padding: 0; list-style: none; }
+  #экран-03 .цель { position: relative; display: flex; flex-direction: column; justify-content: flex-end; gap: .75rem;
+      padding: 1.5rem; border-radius: var(--радиус-карточки); }
+  #экран-03 .цель__номер { font-weight: 800; font-size: var(--кегль-h1); line-height: 1; letter-spacing: -.02em; }
+  #экран-03 .цель h3 { display: block; font-weight: 700; font-size: var(--кегль-лид); line-height: 1.25; margin: 0; }
+  #экран-03 .цель p { font-size: var(--кегль-текст); line-height: 1.6; margin: 0; }
+
+  #экран-03.светлый .цель--плотная, #экран-03.тёмный .цель--плотная { background: var(--цвет-тёмный-фон-2); border: 1px solid color-mix(in srgb, var(--цвет-акцент-яркий) 28%, transparent); box-shadow: var(--тень); }
+  #экран-03.светлый .цель--плотная h3, #экран-03.тёмный .цель--плотная h3 { color: var(--цвет-тёмный-текст); }
+  #экран-03.светлый .цель--плотная p, #экран-03.тёмный .цель--плотная p { color: color-mix(in srgb, var(--цвет-тёмный-текст) 78%, transparent); }
+  #экран-03.светлый .цель--плотная .цель__номер, #экран-03.тёмный .цель--плотная .цель__номер { color: var(--цвет-акцент-яркий); }
+
+  #экран-03.тёмный .цель--стекло {
+      background: color-mix(in srgb, var(--цвет-тёмный-фон-4) 62%, transparent);
+      border: 1px solid color-mix(in srgb, var(--цвет-акцент-яркий) 45%, transparent);
+      -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+      box-shadow: var(--тень), var(--тень-глубокая); }
+  #экран-03.тёмный .цель--стекло h3 { color: var(--цвет-тёмный-текст); }
+  #экран-03.тёмный .цель--стекло p { color: color-mix(in srgb, var(--цвет-тёмный-текст) 82%, transparent); }
+  #экран-03.тёмный .цель--стекло .цель__номер { color: var(--цвет-акцент-яркий); }
+  #экран-03.светлый .цель--стекло {
+      background: var(--цвет-фон-карточки);
+      border: 1px solid var(--цвет-акцент-яркий);
+      box-shadow: var(--тень-глубокая); }
+  #экран-03.светлый .цель--стекло h3 { color: var(--цвет-текст); }
+  #экран-03.светлый .цель--стекло p { color: var(--цвет-текст-мягкий); }
+  #экран-03.светлый .цель--стекло .цель__номер { color: var(--цвет-акцент-глубже); }
+  @media (min-width: 640px) {
+    #экран-03 .цели { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    #экран-03 .цель--стекло { grid-column: 1 / -1; }
+  }
+  @media (min-width: 900px) {
+    #экран-03 .цели { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1.25rem; }
+    #экран-03 .цель { padding: 2rem; }
+    #экран-03 .цель--стекло { grid-column: 1 / span 3; grid-row: 1 / span 2; padding: 2.5rem; }
+    #экран-03 .цель:nth-child(2), #экран-03 .цель:nth-child(3) { grid-column: 4 / span 3; }
+    #экран-03 .цель:nth-child(4) { grid-column: 1 / span 3; }
+    #экран-03 .цель:nth-child(5) { grid-column: 4 / span 3; }
+    #экран-03 .цель--стекло h3 { font-size: var(--кегль-h2); }
+  }
+
 /* экран 04 */
 #экран-04 { position: relative; overflow: hidden; }
   #экран-04 .блок__внутри { position: relative; z-index: 2; }
