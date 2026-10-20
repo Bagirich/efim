@@ -1923,6 +1923,8 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 
 /* экран 06 */
 #экран-06 { position: relative; overflow: hidden; }
+
+  #экран-06.светлый, #экран-06.тёмный { border-top: 1px solid color-mix(in srgb, var(--цвет-акцент-яркий) 55%, transparent); }
   #экран-06 .блок__внутри { position: relative; z-index: 2; }
   #экран-06 .пятно-света { position: absolute; z-index: 0; pointer-events: none; width: 55%; height: 60%; left: -14%; bottom: -6%; }
   #экран-06.светлый .пятно-света { background: radial-gradient(closest-side, color-mix(in srgb, var(--цвет-акцент-яркий) 28%, transparent), transparent); }

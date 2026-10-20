@@ -89,8 +89,15 @@
 </head>
 <body class="с-липкой-кнопкой">
 <section class="блок блок--первый-экран первый-экран--разворот светлый сторона--слева" id="экран-1" data-тип="первый-экран" data-схема="разворот" data-ключ-макета="светлая" data-картинка="фото">
+<style>
+  /* обложка на ноутбуке: пункты списка — основным кеглем, заголовок не мельче заголовков ниже */
+  @media (min-width: 900px) {
+    #экран-1 .список-иконок { font-size: var(--кегль-текст); }
+    #экран-1 h1 { font-size: max(var(--кегль-h1), var(--кегль-h2)); }
+  }
+</style>
   <header class="шапка">
-    <a class="шапка__лого" href="#">EFIM</a>
+    <a class="шапка__лого" href="#экран-1">EFIM</a>
     <span class="шапка__лиц"><svg class="иконка" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
   <path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6L12 3z"/>
 </svg><span><span class="полн">Онлайн · лично или в группе</span></span></span>
@@ -114,7 +121,7 @@
 </svg> Укажите тему или опишите трудность своими словами</p>
     </div>
     <figure class="картинка картинка--фото картинка--край первый-экран__картинка" style="--лицо-в-кадре: .22">
-      <picture><source media="(max-width: 899px)" srcset="img/rukovoditel.webp"><img src="img/rukovoditel.webp" alt="Задача, которая на уроке казалась простой, дома превратилась в квест?" data-лицо="50,22" fetchpriority="high"></picture>
+      <picture><source media="(max-width: 899px)" srcset="img/rukovoditel.webp"><img src="img/rukovoditel.webp" alt="Руководитель школы EFIM" data-лицо="50,22" fetchpriority="high"></picture>
       <div class="чип чип--ролик парит парит--2"><svg class="иконка" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
   <circle cx="12" cy="12" r="9"/>
   <path d="M10 8.5l6 3.5-6 3.5z"/>
