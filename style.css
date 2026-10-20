@@ -2102,7 +2102,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-11 .финал-центр > * { margin: 0; }
   #экран-11 .финал-метка { width: .75rem; height: .75rem; border-radius: 50%; }
   #экран-11.светлый .финал-метка, #экран-11.тёмный .финал-метка { background: var(--цвет-акцент-яркий); outline: .5rem solid color-mix(in srgb, var(--цвет-акцент-яркий) 22%, transparent); }
-  #экран-11 .финал-центр h2 { font-size: var(--кегль-h1); line-height: 1.08; }
+  #экран-11 .финал-центр h2 { font-size: var(--кегль-h2); line-height: 1.12; }
   #экран-11.светлый .финал-центр h2 { color: var(--цвет-текст); }
   #экран-11.тёмный .финал-центр h2 { color: var(--цвет-тёмный-текст); }
   #экран-11 .финал-лид { max-width: 36rem; font-size: var(--кегль-лид); line-height: 1.5; }
@@ -2112,7 +2112,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-11.светлый .финал-сейчас { color: var(--цвет-акцент-глубже); }
   #экран-11.тёмный .финал-сейчас { color: var(--цвет-акцент-яркий); }
   #экран-11 .финал-кнопка { margin-top: .75rem; }
-  #экран-11 .финал-подпись { max-width: 30rem; font-size: var(--кегль-мелкий); line-height: 1.5; }
+  #экран-11 .финал-подпись { max-width: 30rem; font-size: var(--кегль-текст); line-height: 1.5; }
   #экран-11.светлый .финал-подпись { color: var(--цвет-текст-мягкий); }
   #экран-11.тёмный .финал-подпись { color: color-mix(in srgb, var(--цвет-тёмный-текст) 70%, transparent); }
   @media (min-width: 900px) {
