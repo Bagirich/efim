@@ -2021,3 +2021,32 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-08 .место { padding-bottom: 1.5rem; }
     #экран-08 .пустой-отзыв { padding: 3.5rem 3rem; }
   }
+
+/* экран 09 */
+#экран-09 { position: relative; overflow: hidden; }
+  #экран-09 .блок__внутри { position: relative; z-index: 2; display: grid; gap: 2.5rem; }
+  #экран-09 .условия-шапка { display: grid; gap: 1rem; align-content: start; }
+  #экран-09 .условия-шапка > * { margin: 0; }
+  #экран-09 .условия-шапка .лид { font-size: var(--кегль-лид); line-height: 1.55; max-width: 32rem; }
+  #экран-09.светлый .условия-шапка .лид { color: var(--цвет-текст-мягкий); }
+  #экран-09.тёмный .условия-шапка .лид { color: color-mix(in srgb, var(--цвет-тёмный-текст) 82%, transparent); }
+  #экран-09 .условия-колонка { display: grid; gap: 1rem; }
+  #экран-09 .условие { position: relative; display: grid; gap: .5rem; margin: 0; padding: 1.5rem 1.5rem 1.5rem 2.25rem; border-radius: var(--радиус-карточки); overflow: hidden; }
+  #экран-09 .условие::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: .375rem; background: var(--цвет-акцент-яркий); }
+  #экран-09 .условие h3 { margin: 0; display: block; font-size: var(--кегль-лид); line-height: 1.2; font-weight: 700; }
+  #экран-09 .условие p { margin: 0; font-size: var(--кегль-текст); line-height: 1.6; }
+  #экран-09.светлый .условие { background: var(--цвет-фон-карточки); box-shadow: var(--тень); }
+  #экран-09.тёмный .условие { background: color-mix(in srgb, var(--цвет-тёмный-текст) 7%, transparent); border: 1px solid color-mix(in srgb, var(--цвет-акцент-яркий) 30%, transparent); backdrop-filter: blur(10px); }
+  #экран-09.светлый .условие h3 { color: var(--цвет-текст); }
+  #экран-09.тёмный .условие h3 { color: var(--цвет-тёмный-текст); }
+  #экран-09.светлый .условие p { color: var(--цвет-текст-мягкий); }
+  #экран-09.тёмный .условие p { color: color-mix(in srgb, var(--цвет-тёмный-текст) 80%, transparent); }
+  #экран-09 .условия-действие { display: grid; justify-items: start; gap: 1rem; margin-top: .5rem; padding-top: 1.5rem; border-top: 1px solid var(--цвет-акцент-яркий); }
+  #экран-09 .условия-свет { position: absolute; z-index: 0; pointer-events: none; width: 50%; height: 70%; right: -12%; top: -10%; }
+  #экран-09.светлый .условия-свет { background: radial-gradient(closest-side, color-mix(in srgb, var(--цвет-акцент-яркий) 22%, transparent), transparent); }
+  #экран-09.тёмный .условия-свет { background: radial-gradient(closest-side, color-mix(in srgb, var(--цвет-акцент-яркий) 18%, transparent), transparent); }
+  @media (min-width: 900px) {
+    #экран-09 .блок__внутри { grid-template-columns: 5fr 7fr; gap: 4.5rem; align-items: start; }
+    #экран-09 .условие { grid-template-columns: 1fr 1.3fr; gap: 2rem; align-items: center; padding: 1.75rem 2rem 1.75rem 2.75rem; }
+    #экран-09 .условия-шапка { position: sticky; top: 3rem; }
+  }
