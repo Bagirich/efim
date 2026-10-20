@@ -1956,3 +1956,42 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-06 .тропа-шаг::before { left: 3.5rem; right: -2.5rem; top: 1.4rem; bottom: auto; width: auto; height: var(--нить); }
     #экран-06 .итог-плита { grid-template-columns: minmax(0, 1fr) auto; gap: 2.5rem; padding: 2.25rem 2.5rem; }
   }
+
+/* экран 07 */
+#экран-07 { position: relative; overflow: hidden; }
+  #экран-07 .блок__внутри { position: relative; z-index: 2; }
+  #экран-07 .пятно-света { position: absolute; z-index: 0; pointer-events: none; width: 60%; height: 70%; left: -16%; top: -10%; }
+  #экран-07.светлый .пятно-света { background: radial-gradient(closest-side, color-mix(in srgb, var(--цвет-акцент-яркий) 26%, transparent), transparent); }
+  #экран-07.тёмный .пятно-света { background: radial-gradient(closest-side, color-mix(in srgb, var(--цвет-акцент-яркий) 22%, transparent), transparent); }
+  #экран-07 .знакомство { display: grid; gap: 2.5rem; align-items: center; }
+  #экран-07 .портрет-ряд { position: relative; margin: 0 0 1rem 1rem; }
+  #экран-07 .портрет-ряд::before { content: ""; position: absolute; inset: 1rem -1rem -1rem 1rem; z-index: 0; border: 1px solid var(--цвет-акцент-яркий); border-radius: var(--радиус); transform: translate(-1.75rem, 1.75rem) scale(1); }
+  #экран-07 .портрет { position: relative; z-index: 1; margin: 0; border-radius: var(--радиус); overflow: hidden; box-shadow: var(--тень-глубокая); }
+  #экран-07 .портрет img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 18%; }
+  #экран-07 .рассказ { display: grid; gap: 1.25rem; align-content: start; }
+  #экран-07 .рассказ > * { margin: 0; }
+  #экран-07 .рассказ .кикер { margin-bottom: 0; }
+  #экран-07.светлый .рассказ .кикер { color: var(--цвет-акцент-глубже); }
+  #экран-07.тёмный .рассказ .кикер { color: var(--цвет-акцент-яркий); }
+  #экран-07 .рассказ p { font-size: var(--кегль-текст); line-height: 1.65; max-width: 38rem; }
+  #экран-07.светлый .рассказ p { color: var(--цвет-текст-мягкий); }
+  #экран-07.тёмный .рассказ p { color: color-mix(in srgb, var(--цвет-тёмный-текст) 82%, transparent); }
+  #экран-07.светлый .рассказ .лид { color: var(--цвет-текст); font-weight: 600; font-size: var(--кегль-лид); }
+  #экран-07.тёмный .рассказ .лид { color: var(--цвет-акцент-яркий); font-weight: 600; font-size: var(--кегль-лид); }
+  #экран-07 .доводы { display: grid; gap: 0; margin: .75rem 0 0; padding: 0; list-style: none; max-width: 38rem; }
+  #экран-07 .довод { display: grid; gap: .25rem; padding: 1rem 0 1rem 1.25rem; border-left: 3px solid var(--цвет-акцент-яркий); border-top: 1px solid; border-top-left-radius: 0; }
+  #экран-07 .довод:first-child { border-top: 0; }
+  #экран-07.светлый .довод { border-top-color: var(--цвет-линия); }
+  #экран-07.тёмный .довод { border-top-color: color-mix(in srgb, var(--цвет-тёмный-текст) 18%, transparent); }
+  #экран-07 .довод b { font-size: var(--кегль-лид); line-height: 1.25; font-weight: 700; }
+  #экран-07.светлый .довод b { color: var(--цвет-текст); }
+  #экран-07.тёмный .довод b { color: var(--цвет-тёмный-текст); }
+  #экран-07 .довод span { font-size: var(--кегль-текст); line-height: 1.5; }
+  #экран-07.светлый .довод span { color: var(--цвет-текст-мягкий); }
+  #экран-07.тёмный .довод span { color: color-mix(in srgb, var(--цвет-тёмный-текст) 78%, transparent); }
+
+  @media (min-width: 900px) {
+    #экран-07 .знакомство { grid-template-columns: 5fr 6fr; column-gap: 5.5rem; }
+    #экран-07 .портрет-ряд { margin: 0 0 1.75rem 1.75rem; }
+    #экран-07 .портрет img { aspect-ratio: 4 / 5; }
+  }
