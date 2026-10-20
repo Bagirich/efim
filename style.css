@@ -2088,3 +2088,34 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-10 .сомнения-тело { grid-template-columns: 8fr 4fr; gap: 4rem; align-items: start; }
     #экран-10 .приглашение-плита { position: sticky; top: 3rem; padding: 2.5rem 2rem; }
   }
+
+/* экран 11 */
+#экран-11 { position: relative; overflow: hidden; }
+  #экран-11 .блок__внутри { position: relative; z-index: 2; }
+  #экран-11 .свет-финала { position: absolute; z-index: 0; pointer-events: none; left: 50%; top: 50%; width: 120%; height: 120%; transform: translate(-50%, -50%); }
+  #экран-11.светлый .свет-финала { background: radial-gradient(closest-side, color-mix(in srgb, var(--цвет-акцент-яркий) 24%, transparent), transparent); }
+  #экран-11.тёмный .свет-финала { background: radial-gradient(closest-side, color-mix(in srgb, var(--цвет-акцент-яркий) 30%, transparent), transparent); }
+  #экран-11 .кольцо-финала { position: absolute; z-index: 1; pointer-events: none; left: 50%; top: 50%; width: min(78rem, 150%); aspect-ratio: 1; transform: translate(-50%, -50%); border-radius: 50%; }
+  #экран-11.светлый .кольцо-финала { border: 1px solid color-mix(in srgb, var(--цвет-акцент-яркий) 35%, transparent); }
+  #экран-11.тёмный .кольцо-финала { border: 1px solid color-mix(in srgb, var(--цвет-акцент-яркий) 40%, transparent); }
+  #экран-11 .финал-центр { display: grid; justify-items: center; gap: 1.5rem; max-width: 46rem; margin: 0 auto; padding: 2rem 0; text-align: center; }
+  #экран-11 .финал-центр > * { margin: 0; }
+  #экран-11 .финал-метка { width: .75rem; height: .75rem; border-radius: 50%; }
+  #экран-11.светлый .финал-метка, #экран-11.тёмный .финал-метка { background: var(--цвет-акцент-яркий); outline: .5rem solid color-mix(in srgb, var(--цвет-акцент-яркий) 22%, transparent); }
+  #экран-11 .финал-центр h2 { font-size: var(--кегль-h1); line-height: 1.08; }
+  #экран-11.светлый .финал-центр h2 { color: var(--цвет-текст); }
+  #экран-11.тёмный .финал-центр h2 { color: var(--цвет-тёмный-текст); }
+  #экран-11 .финал-лид { max-width: 36rem; font-size: var(--кегль-лид); line-height: 1.5; }
+  #экран-11.светлый .финал-лид { color: var(--цвет-текст-мягкий); }
+  #экран-11.тёмный .финал-лид { color: color-mix(in srgb, var(--цвет-тёмный-текст) 80%, transparent); }
+  #экран-11 .финал-сейчас { font-size: var(--кегль-текст); line-height: 1.5; padding-top: 1rem; border-top: 1px solid color-mix(in srgb, var(--цвет-акцент-яркий) 55%, transparent); }
+  #экран-11.светлый .финал-сейчас { color: var(--цвет-акцент-глубже); }
+  #экран-11.тёмный .финал-сейчас { color: var(--цвет-акцент-яркий); }
+  #экран-11 .финал-кнопка { margin-top: .75rem; }
+  #экран-11 .финал-подпись { max-width: 30rem; font-size: var(--кегль-мелкий); line-height: 1.5; }
+  #экран-11.светлый .финал-подпись { color: var(--цвет-текст-мягкий); }
+  #экран-11.тёмный .финал-подпись { color: color-mix(in srgb, var(--цвет-тёмный-текст) 70%, transparent); }
+  @media (min-width: 900px) {
+    #экран-11 .финал-центр { gap: 2rem; padding: 4rem 0; }
+    #экран-11 .финал-кнопка { margin-top: 1rem; }
+  }
