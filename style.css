@@ -1966,8 +1966,8 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-07.светлый .пятно-света { background: radial-gradient(closest-side, color-mix(in srgb, var(--цвет-акцент-яркий) 26%, transparent), transparent); }
   #экран-07.тёмный .пятно-света { background: radial-gradient(closest-side, color-mix(in srgb, var(--цвет-акцент-яркий) 22%, transparent), transparent); }
   #экран-07 .знакомство { display: grid; gap: 2.5rem; align-items: center; }
-  #экран-07 .портрет-ряд { position: relative; margin: 0 0 1rem 1rem; }
-  #экран-07 .портрет-ряд::before { content: ""; position: absolute; inset: 1rem -1rem -1rem 1rem; z-index: 0; border: 1px solid var(--цвет-акцент-яркий); border-radius: var(--радиус); transform: translate(-1.75rem, 1.75rem) scale(1); }
+  #экран-07 .портрет-ряд { position: relative; margin: .75rem; }
+  #экран-07 .портрет-ряд::before { content: ""; position: absolute; inset: -.75rem; z-index: 0; border: 1px solid var(--цвет-акцент-яркий); border-radius: var(--радиус-карточки); }
   #экран-07 .портрет { position: relative; z-index: 1; margin: 0; border-radius: var(--радиус); overflow: hidden; box-shadow: var(--тень-глубокая); }
   #экран-07 .портрет img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 18%; }
   #экран-07 .рассказ { display: grid; gap: 1.25rem; align-content: start; }
@@ -1994,7 +1994,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 
   @media (min-width: 900px) {
     #экран-07 .знакомство { grid-template-columns: 5fr 6fr; column-gap: 5.5rem; }
-    #экран-07 .портрет-ряд { margin: 0 0 1.75rem 1.75rem; }
+    #экран-07 .портрет-ряд { margin: .75rem; }
     #экран-07 .портрет img { aspect-ratio: 4 / 5; }
   }
 
