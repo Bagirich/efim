@@ -91,13 +91,27 @@
 <section class="блок блок--первый-экран первый-экран--разворот светлый сторона--слева" id="экран-1" data-тип="первый-экран" data-схема="разворот" data-ключ-макета="светлая" data-картинка="фото">
 <style>
   /* обложка на ноутбуке: пункты списка — основным кеглем, заголовок не мельче заголовков ниже */
+  /* логотип: золотой атом, EFIM, черта и подпись (подпись — с 640 px) */
+  #экран-1 .лого-атом { gap: .6rem; }
+  #экран-1 .лого-атом__знак { width: 2.4rem; height: 2.4rem; flex: none; color: var(--цвет-акцент); }
+  #экран-1 .лого-атом__имя { font-weight: 800; font-size: 1.45rem; letter-spacing: .02em; color: var(--цвет-акцент); }
+  #экран-1 .лого-атом__подпись { display: none; padding-left: .75rem; border-left: 1px solid var(--цвет-акцент); font: 500 .8rem/1.2 var(--шрифт-текста); white-space: nowrap; color: var(--цвет-текст); }
+  @media (min-width: 640px) { #экран-1 .лого-атом__подпись { display: block; } }
   @media (min-width: 900px) {
     #экран-1 .список-иконок { font-size: var(--кегль-текст); }
     #экран-1 h1 { font-size: max(var(--кегль-h1), var(--кегль-h2)); }
   }
 </style>
   <header class="шапка">
-    <a class="шапка__лого" href="#экран-1">EFIM</a>
+    <a class="шапка__лого лого-атом" href="#экран-1" aria-label="EFIM — Электронная школа физики и математики">
+      <svg class="лого-атом__знак" viewBox="0 0 48 48" aria-hidden="true">
+        <defs><radialGradient id="лого-ядро" cx="38%" cy="34%" r="70%"><stop offset="0" stop-color="#fff3c4"/><stop offset=".45" stop-color="#e2b54a"/><stop offset="1" stop-color="#8a5a17"/></radialGradient></defs>
+        <g fill="none" stroke="currentColor" stroke-width="1.7"><ellipse cx="24" cy="24" rx="21" ry="8"/><ellipse cx="24" cy="24" rx="21" ry="8" transform="rotate(60 24 24)"/><ellipse cx="24" cy="24" rx="21" ry="8" transform="rotate(120 24 24)"/></g>
+        <circle cx="24" cy="24" r="5.5" fill="url(#лого-ядро)"/>
+      </svg>
+      <span class="лого-атом__имя">EFIM</span>
+      <span class="лого-атом__подпись">Электронная школа<br>физики и математики</span>
+    </a>
     <span class="шапка__лиц"><svg class="иконка" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
   <path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6L12 3z"/>
 </svg><span><span class="полн">Онлайн · лично или в группе</span></span></span>
