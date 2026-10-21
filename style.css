@@ -2121,3 +2121,9 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-11 .финал-центр { gap: 2rem; padding: 4rem 0; }
     #экран-11 .финал-кнопка { margin-top: 1rem; }
   }
+
+/* экран 12 */
+#экран-12 .подвал__лого { gap: .6rem; }
+  #экран-12 .лого-атом__знак { width: 2rem; height: 2rem; flex: none; color: var(--цвет-акцент); }
+  #экран-12 .лого-атом__имя { font-weight: 800; font-size: var(--кегль-лид); letter-spacing: .02em; color: var(--цвет-акцент); }
+  #экран-12 .подвал__ссылки a span { color: var(--цвет-текст-мягкий); }
