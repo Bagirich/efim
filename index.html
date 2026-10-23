@@ -6,10 +6,26 @@
 <title>EFIM — электронная школа физики и математики</title>
 <meta name="description" content="EFIM: понятные объяснения, практика и поддержка для уверенных побед в учёбе">
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://e-fim.com/">
 <meta property="og:title" content="EFIM — электронная школа физики и математики">
 <meta property="og:description" content="EFIM: физика и математика без стресса. Объясняем так, что становится понятно, и даём задачи, чтобы закрепить.">
 <meta property="og:image" content="https://e-fim.com/img/card.jpg">
 <meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Электронная школа физики и математики EFIM",
+  "@id": "https://e-fim.com/#person",
+  "jobTitle": "Электронная школа точных наук и цифровых технологий",
+  "description": "Понимать. Решать. Применять.\nНаправления: физика · математика · информатика · искусственный интеллект и нейросети.",
+  "url": "https://e-fim.com/",
+  "sameAs": [
+    "https://max.ru/se14653200_biz",
+    "https://t.me/efimtic"
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap">
@@ -89,7 +105,7 @@
 </script>
 </head>
 <body class="с-липкой-кнопкой">
-<section class="блок блок--первый-экран первый-экран--разворот светлый сторона--слева" id="экран-1" data-тип="первый-экран" data-схема="разворот" data-ключ-макета="светлая" data-картинка="фото">
+<section class="блок блок--первый-экран первый-экран--разворот светлый сторона--слева" id="экран-1" data-тип="первый-экран" data-схема="разворот" data-ключ-макета="светлая" data-картинка="фото"><div class="стык стык--низ" aria-hidden="true" style="--стык-сосед: var(--цвет-фон-2, var(--цвет-фон))"></div>
 <style>
   /* обложка на ноутбуке: пункты списка — основным кеглем, заголовок не мельче заголовков ниже */
   /* логотип: золотой атом, EFIM, черта и подпись (подпись — с 640 px) */
@@ -98,6 +114,13 @@
   #экран-1 .лого-атом__имя { font-weight: 800; font-size: 1.45rem; letter-spacing: .02em; color: var(--цвет-акцент); }
   #экран-1 .лого-атом__подпись { display: none; padding-left: .75rem; border-left: 1px solid var(--цвет-акцент); font: 500 .8rem/1.2 var(--шрифт-текста); white-space: nowrap; color: var(--цвет-текст); }
   @media (min-width: 640px) { #экран-1 .лого-атом__подпись { display: block; } }
+  /* подпись автора на телефоне: одной строкой, а не двумя колонками */
+  @media (max-width: 899px) { #экран-1 .чип--автор { display: block; width: max-content; max-width: calc(100% - 2em); white-space: nowrap; font-size: .85em; } }
+  /* телефон лёжа: в кадре всё лицо, подпись — внизу кадра, а не под плашкой */
+  @media (max-width: 899px) and (orientation: landscape) {
+    #экран-1 { --фото-в: 72vh; --лицо-тел: calc(var(--фото-в) * .42); }
+    #экран-1 .чип--автор { top: auto; bottom: 2.2em; }
+  }
   @media (min-width: 900px) {
     #экран-1 .список-иконок { font-size: var(--кегль-текст); }
     #экран-1 h1 { font-size: max(var(--кегль-h1), var(--кегль-h2)); }
@@ -149,7 +172,7 @@
     </figure>
   </div>
 </section>
-<section class="блок блок--боль светлый второй" id="экран-02" data-тип="боль" data-вёрстка="своя">
+<section class="блок блок--боль светлый второй" id="экран-02" data-тип="боль" data-вёрстка="своя"><div class="стык стык--верх" aria-hidden="true" style="--стык-сосед: var(--цвет-фон)"></div><div class="стык стык--низ" aria-hidden="true" style="--стык-сосед: var(--цвет-фон)"></div>
 <div class="блок__внутри">
   <div class="раскладка">
     <div class="секция__шапка">
@@ -164,7 +187,7 @@
   </div>
 </div>
 </section>
-<section class="блок блок--боль светлый" id="экран-03" data-тип="боль" data-вёрстка="своя">
+<section class="блок блок--боль светлый" id="экран-03" data-тип="боль" data-вёрстка="своя"><div class="стык стык--верх" aria-hidden="true" style="--стык-сосед: var(--цвет-фон-2, var(--цвет-фон))"></div><div class="стык стык--низ" aria-hidden="true" style="--стык-сосед: var(--цвет-тёмный-фон)"></div>
 <span class="пятно-света" aria-hidden="true"></span>
 <div class="блок__внутри">
   <div class="цели-шапка">
@@ -180,7 +203,7 @@
   </ol>
 </div>
 </section>
-<section class="блок блок--что-получите тёмный" id="экран-04" data-тип="что-получите" data-вёрстка="своя">
+<section class="блок блок--что-получите тёмный" id="экран-04" data-тип="что-получите" data-вёрстка="своя"><div class="стык стык--верх" aria-hidden="true" style="--стык-сосед: var(--цвет-фон)"></div><div class="стык стык--низ" aria-hidden="true" style="--стык-сосед: var(--цвет-фон)"></div>
 <span class="пятно-света" aria-hidden="true"></span>
 <div class="блок__внутри">
   <div class="разворот">
@@ -198,7 +221,7 @@
   </div>
 </div>
 </section>
-<section class="блок блок--программа светлый" id="экран-05" data-тип="программа" data-вёрстка="своя">
+<section class="блок блок--программа светлый" id="экран-05" data-тип="программа" data-вёрстка="своя"><div class="стык стык--верх" aria-hidden="true" style="--стык-сосед: var(--цвет-тёмный-фон)"></div><div class="стык стык--низ" aria-hidden="true" style="--стык-сосед: var(--цвет-фон-2, var(--цвет-фон))"></div>
 <span class="пятно-света" aria-hidden="true"></span>
 <div class="блок__внутри">
   <div class="внутри-шапка">
@@ -215,7 +238,7 @@
   </ul>
 </div>
 </section>
-<section class="блок блок--решение светлый второй" id="экран-06" data-тип="решение" data-вёрстка="своя">
+<section class="блок блок--решение светлый второй" id="экран-06" data-тип="решение" data-вёрстка="своя"><div class="стык стык--верх" aria-hidden="true" style="--стык-сосед: var(--цвет-фон)"></div><div class="стык стык--низ" aria-hidden="true" style="--стык-сосед: var(--цвет-тёмный-фон)"></div>
 <span class="пятно-света" aria-hidden="true"></span>
 <div class="блок__внутри">
   <div class="начало-шапка">
@@ -233,7 +256,7 @@
   </div>
 </div>
 </section>
-<section class="блок блок--о-себе тёмный" id="экран-07" data-тип="о-себе" data-вёрстка="своя">
+<section class="блок блок--о-себе тёмный" id="экран-07" data-тип="о-себе" data-вёрстка="своя"><div class="стык стык--верх" aria-hidden="true" style="--стык-сосед: var(--цвет-фон-2, var(--цвет-фон))"></div><div class="стык стык--низ" aria-hidden="true" style="--стык-сосед: var(--цвет-фон)"></div>
 <span class="пятно-света" aria-hidden="true"></span>
 <div class="блок__внутри">
   <div class="знакомство">
@@ -257,7 +280,7 @@
   </div>
 </div>
 </section>
-<section class="блок блок--отзывы светлый" id="экран-08" data-тип="отзывы" data-вёрстка="своя">
+<section class="блок блок--отзывы светлый" id="экран-08" data-тип="отзывы" data-вёрстка="своя"><div class="стык стык--верх" aria-hidden="true" style="--стык-сосед: var(--цвет-тёмный-фон)"></div><div class="стык стык--низ" aria-hidden="true" style="--стык-сосед: var(--цвет-тёмный-фон)"></div>
 <div class="блок__внутри">
   <div class="отзывы-шапка">
     <h2>Что говорят ученики</h2>
@@ -271,7 +294,7 @@
   </div>
 </div>
 </section>
-<section class="блок блок--прайс-лист тёмный" id="экран-09" data-тип="прайс-лист" data-вёрстка="своя">
+<section class="блок блок--прайс-лист тёмный" id="экран-09" data-тип="прайс-лист" data-вёрстка="своя"><div class="стык стык--верх" aria-hidden="true" style="--стык-сосед: var(--цвет-фон)"></div><div class="стык стык--низ" aria-hidden="true" style="--стык-сосед: var(--цвет-фон)"></div>
 <div class="условия-свет" aria-hidden="true"></div>
 <div class="блок__внутри">
   <div class="условия-шапка">
@@ -297,7 +320,7 @@
   </div>
 </div>
 </section>
-<section class="блок блок--вопросы-ответы светлый" id="экран-10" data-тип="вопросы-ответы" data-вёрстка="своя">
+<section class="блок блок--вопросы-ответы светлый" id="экран-10" data-тип="вопросы-ответы" data-вёрстка="своя"><div class="стык стык--верх" aria-hidden="true" style="--стык-сосед: var(--цвет-тёмный-фон)"></div><div class="стык стык--низ" aria-hidden="true" style="--стык-сосед: var(--цвет-тёмный-фон)"></div>
 <div class="сомнения-свет" aria-hidden="true"></div>
 <div class="блок__внутри">
   <div class="сомнения-шапка">
@@ -339,7 +362,7 @@
   </div>
 </div>
 </section>
-<section class="блок блок--финал тёмный" id="экран-11" data-тип="финал" data-вёрстка="своя">
+<section class="блок блок--финал тёмный" id="экран-11" data-тип="финал" data-вёрстка="своя"><div class="стык стык--верх" aria-hidden="true" style="--стык-сосед: var(--цвет-фон)"></div><div class="стык стык--низ" aria-hidden="true" style="--стык-сосед: var(--цвет-фон)"></div>
 <span class="свет-финала" aria-hidden="true"></span>
 <span class="кольцо-финала" aria-hidden="true"></span>
 <div class="блок__внутри">
@@ -353,7 +376,7 @@
   </div>
 </div>
 </section>
-<section class="блок блок--подвал светлый" id="экран-12" data-тип="подвал" data-вёрстка="своя">
+<section class="блок блок--подвал светлый" id="экран-12" data-тип="подвал" data-вёрстка="своя"><div class="стык стык--верх" aria-hidden="true" style="--стык-сосед: var(--цвет-тёмный-фон)"></div>
   <div class="блок__внутри">
     <div class="подвал__сетка">
       <div>
